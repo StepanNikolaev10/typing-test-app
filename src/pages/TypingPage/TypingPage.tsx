@@ -1,14 +1,13 @@
-import type { TTheme } from "../../types/theme";
 import styles from "./TypingPage.module.scss";
 
-type TProps = {
-  theme: TTheme;
-};
-
-const TypingPage = ({ theme }: TProps) => {
+const TypingPage = () => {
   return (
     <div className={styles.typingPage}>
-      <main className={styles.main}>SDF</main>
+      <a className={styles.logo}>Typing test</a>
+      <main className={styles.main}>
+        <div className={styles.timer}>Timer</div>
+        <div className={styles.timer}>Timer</div>
+      </main>
     </div>
   );
 };

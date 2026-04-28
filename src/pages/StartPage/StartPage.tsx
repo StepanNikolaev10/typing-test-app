@@ -1,15 +1,14 @@
 import styles from "./StartPage.module.scss";
-import type { TTheme } from "../../types/theme";
+import ToggleThemeBtn from "../../components/ToggleThemeBtn/ToggleThemeBtn";
 
-type TProps = {
-  theme: TTheme;
-};
-
-const StartPage = ({ theme }: TProps) => {
+const StartPage = () => {
   return (
     <div
-      className={`${styles.startPage} ${theme === "dark" ? styles.darked : ""}`}
+      className={`${styles.startPage}`}
     >
+      <header className={styles.header}>
+        <ToggleThemeBtn />
+      </header>
       <main className={styles.main}>
         <div className={styles.title}>Typing test</div>
         <button className={styles.startBtn}>Start</button>

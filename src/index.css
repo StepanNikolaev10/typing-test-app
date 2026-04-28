@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+/* Псевдокласс :root выбирает корневой элемент документа (тег <html>).
+Он задает самую широкую область видимости, поэтому объявленные здесь 
+переменные становятся глобальными и доступны абсолютно везде. */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202020;
+  --btn-bg: #e0e0e0;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --btn-bg: #333333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  margin: 0;
+  font-family: sans-serif;
+}
+
 #root {
   min-height: 100svh;
   display: flex;
